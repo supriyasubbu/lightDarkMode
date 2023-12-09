@@ -6,23 +6,20 @@ class LightDarkMode extends Component {
   state = {isDark: true}
 
   changeLight = () => {
-    const {isDark} = this.state
-    this.setState({isDark: !isDark})
+    this.setState(previousState => ({isDark: !previousState.isDark}))
   }
 
   render() {
-    let mode
     const {isDark} = this.state
+    const backGroundColor = isDark ? 'dark-mode' : 'light-mode'
+    const buttonTextChange = isDark ? 'light mode' : 'dark mode'
 
-    const modeText = isDark
-      ? ((mode = 'dark-mode'), 'light Mode')
-      : ((mode = 'light-mode'), 'Dark Mode')
     return (
       <div className="background-container">
-        <div className={mode}>
+        <div className={`container ${backGroundColor}`}>
           <h1 className="heading">Click To Change Mode</h1>
           <button type="button" onClick={this.changeLight} className="mode-btn">
-            {modeText}
+            {buttonTextChange}
           </button>
         </div>
       </div>
