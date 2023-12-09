@@ -1,0 +1,36 @@
+/* Write your CSS here */
+
+.background-container {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.dark-mode {
+  background-color: #000000;
+  border-radius: 8px;
+  padding: 20px;
+  color: #ffffff;
+}
+
+.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.heading {
+  font-size: 20px;
+}
+
+.mode-bth {
+  height: 36px;
+  width: 100px;
+  border-radius: 5px;
+  font-weight: 700;
+}
